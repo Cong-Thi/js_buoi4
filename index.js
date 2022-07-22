@@ -356,23 +356,23 @@ function tinhNgay() {
     case 8:
     case 10:
     case 12: {
-      thongBao.innerHTML = "Tháng " + month + " " + year +" có 31 ngày";
+      thongBao.innerHTML = "Tháng " + month + " năm " + year +" có 31 ngày";
       break;
     }
     case 4:
     case 6:
     case 9:
     case 11: {
-      thongBao.innerHTML = "Tháng " + month + " " + year +" có 30 ngày";
+      thongBao.innerHTML = "Tháng " + month + " năm " + year +" có 30 ngày";
       break;
     }
     case 2: {
       if (!chia4 && chia100) {
-        thongBao.innerHTML = "Tháng " + month + " " + year + " có 29 ngày";
+        thongBao.innerHTML = "Tháng " + month + " năm " + year + " có 29 ngày";
       } else if (!chia400) {
-        thongBao.innerHTML = "Tháng " + month + " " + year + " có 29 ngày";
+        thongBao.innerHTML = "Tháng " + month + " năm " + year + " có 29 ngày";
       } else {
-        thongBao.innerHTML = "Tháng " + month + " " + year +" có 28 ngày";
+        thongBao.innerHTML = "Tháng " + month + " năm " + year +" có 28 ngày";
       }
 
       break;
