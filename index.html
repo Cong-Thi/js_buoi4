@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Bài Tập Buổi 4</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container py-5 text-center ">
+        <h1>Bài Tập JavaScript Buổi 4</h1>
+        <div class="row py-5 home">
+            <div class="col-2 pl-3 nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                aria-orientation="vertical">
+                <a class="nav-link active" data-toggle="pill" href="#bai1" role="tab" aria-selected="true">Bài 1</a>
+                <a class="nav-link" data-toggle="pill" href="#bai2" role="tab" aria-selected="false">Bài 2</a>
+                <a class="nav-link" data-toggle="pill" href="#bai3" role="tab" aria-selected="false">Bài 3</a>
+                <a class="nav-link" data-toggle="pill" href="#bai4" role="tab" aria-selected="false">Bài 4</a>
+                <a class="nav-link" data-toggle="pill" href="#bai5" role="tab" aria-selected="false">Bài 5</a>
+                <a class="nav-link" data-toggle="pill" href="#bai6" role="tab" aria-selected="false">Bài 6</a>
+                <a class="nav-link" data-toggle="pill" href="#bai7" role="tab" aria-selected="false">Bài 7</a>
+                <a class="nav-link" data-toggle="pill" href="#bai8" role="tab" aria-selected="false">Bài 8</a>
+            </div>
+            <div class="col-10 tab-content" id="v-pills-tabContent">
+                <!-- bài 1 -->
+                <div class="tab-pane fade show active" id="bai1" role="tabpanel">
+                    <h2>Xuất 3 số theo thứ tự tăng dần</h2>
+                    <div class="form-group">
+                        <input type="number" name="" id="so1" class="form-control mb-2" placeholder="Nhập số thứ 1"
+                            aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="" id="so2" class="form-control mb-2" placeholder="Nhập số thứ 2"
+                            aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="" id="so3" class="form-control mb-2" placeholder="Nhập số thứ 3"
+                            aria-describedby="helpId">
+                    </div>
+                    <button onclick="sapXep()" class="btn btn-primary">Sắp Xếp</button>
+                    <div class="alert" id="alert1"></div>
+                </div>
+                <!-- bài 2 -->
+                <div class="tab-pane fade" id="bai2" role="tabpanel">
+                    <h2>Gửi lời chào</h2>
+                    <div class="form-group">
+                        <select class="form-control" id="thanhVien">
+                            <option value="1">Chọn Thành Viên</option>
+                            <option value="2">Bố</option>
+                            <option value="3">Mẹ</option>
+                            <option value="4">Anh Trai</option>
+                            <option value="5">Em Gái</option>
+                        </select>
+                    </div>
+                    <button onclick="guiLoiChao()" class="btn btn-primary">Gửi Lời Chào</button>
+                    <div class="alert" id="alert2"></div>
+                </div>
+                <!-- bài 3 -->
+                <div class="tab-pane fade" id="bai3" role="tabpanel">
+                    <h2>Đếm số chẵn lẻ</h2>
+                    <div class="form-group">
+                        <input type="number" name="" id="number1" class="form-control mb-2" placeholder="Nhập số thứ 1"
+                            aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="" id="number2" class="form-control mb-2" placeholder="Nhập số thứ 2"
+                            aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="" id="number3" class="form-control mb-2" placeholder="Nhập số thứ 3"
+                            aria-describedby="helpId">
+                    </div>
+                    <button onclick="dem()" class="btn btn-primary">Đếm</button>
+                    <div class="alert" id="alert3"></div>
+                </div>
+                <!-- bài 4 -->
+                <div class="tab-pane fade" id="bai4" role="tabpanel">
+                    <h2>Dự đoán hình tam giác</h2>
+                    <div class="form-group">
+                        <input type="number" name="" id="canh1" class="form-control mb-2"
+                            placeholder="Nhập độ dài cạnh 1" aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="" id="canh2" class="form-control mb-2"
+                            placeholder="Nhập độ dài cạnh 2" aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="" id="canh3" class="form-control mb-2"
+                            placeholder="Nhập độ dài cạnh 3" aria-describedby="helpId">
+                    </div>
+                    <button onclick="xetTamGiac()" class="btn btn-primary">Dự Đoán</button>
+                    <div class="alert" id="alert4"></div>
+                </div>
+                <!-- bài 5 -->
+                <div class="tab-pane fade" id="bai5" role="tabpanel">
+                    <h2>Tính Ngày Tháng Năm</h2>
+                    <div class="form-group">
+                        <input type="number" name="" id="date" class="form-control" placeholder="Nhập ngày"
+                            aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="" id="month" class="form-control" placeholder="Nhập tháng"
+                            aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="" id="year" class="form-control" placeholder="Nhập năm"
+                            aria-describedby="helpId">
+                    </div>
+                    <button onclick="yesterday()" class="btn btn-primary">Ngày Hôm Qua</button>
+                    <button onclick="tomorrow()" class="btn btn-primary">Ngày Mai</button>
+                    <div class="alert" id="alert5"></div>
+                </div>
+                <!-- bài 6 -->
+                <div class="tab-pane fade" id="bai6" role="tabpanel">
+                    <h2>Tính Ngày</h2>
+                    <div class="form-group">
+                        <input type="number" name="" id="month1" class="form-control" placeholder="Nhập tháng"
+                            aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="" id="year1" class="form-control" placeholder="Nhập năm"
+                            aria-describedby="helpId">
+                    </div>
+                    <button onclick="tinhNgay()" class="btn btn-primary">Tính Ngày</button>
+                    <div class="alert" id="alert6"></div>
+                </div>
+                <!-- bài 7 -->
+                <div class="tab-pane fade" id="bai7" role="tabpanel">
+                    <h2>Đọc 3 số</h2>
+                    <div class="form-group">
+                        <input type="number" name="" id="num2" class="form-control" placeholder="Nhập số có 3 chữ số"
+                            aria-describedby="helpId">
+                    </div>
+                    <button onclick="docSo()" class="btn btn-primary">Đọc Số</button>
+                    <div class="alert" id="alert7"></div>
+                </div>
+                <!-- bài 8 -->
+                <div class="tab-pane fade" id="bai8" role="tabpanel">
+                    <h2>Tìm sinh viên xa trường nhất</h2>
+                    <h3>Sinh Viên 1</h3>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="form-group">
+                                <input type="text" name="" id="name1" class="form-control"
+                                    placeholder="Nhập tên" aria-describedby="helpId">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <input type="number" name="" id="x1" class="form-control"
+                                    placeholder="Nhập tọa độ x" aria-describedby="helpId">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <input type="number" name="" id="y1" class="form-control"
+                                    placeholder="Nhập tọa độ y" aria-describedby="helpId">
+                            </div>
+                        </div>
+                    </div>
+                        <h3>Sinh Viên 2</h3>
+                        <div class="row">
+
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <input type="text" name="" id="name2" class="form-control"
+                                        placeholder="Nhập tên" aria-describedby="helpId">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <input type="number" name="" id="x2" class="form-control"
+                                        placeholder="Nhập tọa độ x" aria-describedby="helpId">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <input type="number" name="" id="y2" class="form-control"
+                                        placeholder="Nhập tọa độ y" aria-describedby="helpId">
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Sinh Viên 3</h3>
+                        <div class="row">
+
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <input type="text" name="" id="name3" class="form-control"
+                                        placeholder="Nhập tên" aria-describedby="helpId">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <input type="number" name="" id="x3" class="form-control"
+                                        placeholder="Nhập tọa độ x" aria-describedby="helpId">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <input type="number" name="" id="y3" class="form-control"
+                                        placeholder="Nhập tọa độ y" aria-describedby="helpId">
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Trường Học</h3>
+                        <div class="row">
+
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <input type="number" name="" id="x4" class="form-control"
+                                        placeholder="Nhập tọa độ x" aria-describedby="helpId">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <input type="number" name="" id="y4" class="form-control"
+                                        placeholder="Nhập tọa độ y" aria-describedby="helpId">
+                                </div>
+                            </div>
+                        </div>
+                    <button onclick="timDuong()" class="btn btn-primary">Tìm</button>
+                    <div class="alert" id="alert8"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
